@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <help_text/>
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>396</x>
+      <y>0</y>
+      <w>66</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>286</x>
+      <y>165</y>
+      <w>352</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>      Blender 
+--
+ - scene: Scene                         
+ - objects: List&lt;Object&gt; 
+--
+ + createObject(type: string): Object   
+
+-
+ + getObjectByName(name: string): Object</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>297</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>286</x>
+      <y>363</y>
+      <w>374</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>_object: Class_
+--
+ 		   
+ 		        - name: string  
+ 		          
+         - type: string   
+          
+         - mesh: Mesh  
+             
+         - location: Vector
+--
+
+ 		         + setLocation(x: float, y: float, z: float): void
+ 		     
+          + setMesh(mesh: Mesh): void   
+                              
+         + applyTransformations(): void                   </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>418</x>
+      <y>99</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>451</x>
+      <y>649</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>286</x>
+      <y>715</y>
+      <w>374</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>Mesh        
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+
+         - vertices: List&lt;Vertex&gt; 
+         - edges: List&lt;Edge&gt;      
+         - faces: List&lt;Face&gt;      
+         
+--
+  		       + createVertices(): void  
+         + createEdges(): void     
+         + createFaces(): void     
+         + setMaterial(material: Material): void </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>286</x>
+      <y>1012</y>
+      <w>374</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Vertex      
+--
+         - x: float       
+         - y: float       
+         - z: float       </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>429</x>
+      <y>946</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>429</x>
+      <y>1089</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>275</x>
+      <y>1155</y>
+      <w>374</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Edge              
+--
+         - start: Vertex  
+         - end: Vertex    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>1441</y>
+      <w>374</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>Material                    
+--
+       - color: Color   
+       - texture: Texture
+       
+--
+       + applyToMesh(): void 
+       </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>1298</y>
+      <w>374</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Face                      
+--
+         - vertices: List&lt;Vertex&gt; 
+         - material: Material     </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>429</x>
+      <y>1232</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>429</x>
+      <y>1375</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

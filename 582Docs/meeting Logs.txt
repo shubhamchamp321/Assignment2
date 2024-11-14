@@ -1,0 +1,45 @@
+Meeting notes:
+
+*Speedup
+	-Recent speedups are very nice!
+	-Viewport compositor is cool
+
+*Glare node
+
+- Use case: product animation for luxury brands. Need to set glare on some parts of the image only in a convenient way. Currently possible in Blender but very cumbersome. In this case, compositing with Davinci is easier because you can set the parts of the image where the glare effect takes place using gizmos.
+
+- Use case: color grading after animation. Glare doesn’t have alpha when exported. This leads to problems when using AE. ~50% in the room agree this is a problem. (Unclear to me if the problem lies in Blender or in AE. Follow-up talks with users planned)
+
+*Caching
+
+- Use case: NPR compositing. At some point, compositing becomes so complex that it can’t be realtime anymore. Therefore a caching mechanism is needed.
+
+- Tweaking a single node feels slow. Can we cache up to the node before? Most people familiar with Nuke expect this node behavior. Reasoning is if you change one parameter in a node, you are most likely to change it again because you never hit the perfect parameter/number the first time you change it.
+
+- Workarounds with proxies exist, but are complicated to setup.
+
+*UX/UI
+
+- “Blender feels fragmented”: For some workflows, it is tedious to switch back and forth between sequencer and compositor. Tools should be right in the compositing editor, not a separate window for each workflow (follow-up talks with users planned to understand the problem better)
+
+- 3D support in the compositor gives Blender a unique advantage: minority of people in the room agree.
+
+- Top down nodes is better? Majority doesn’t think so.
+
+- Changing start/end frames is not straightforward.
+
+- Use case: get footage from a different team (typically 3d render). Having multiple people working on the same blend file and on the same node tree is
+
+Import/Export
+
+- OpenVDB: files are slow in blender. ~20% of attendees who actually use it agree.
+
+- OpenEXR: the file format remains very important. ~20% of attendees prefer to export all frames as openEXR, open them in a separate blend file for compositing for a clean workflow, even though such a workflow is possible without import/export of intermediate renders.
+
+- There is duplicate functionality between File Output and render output. Both are rarely needed at the same time. Almost everyone agrees.
+
+* Color management
+
+- Most users in the room are not concerned with color management. Only ~4 people think it’s crucial for their workflow.
+
+- It was concluded that color management is important, but not relevant for this meeting.
